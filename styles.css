@@ -34,8 +34,11 @@ nav ul li{
 
 a{
     text-decoration: none;
-    color:var(--clr-neutral-purple);
 }
+a:link{
+    color:var(--clr-neutral-purple)
+}
+
 a:visited{
     color: var(--clr-neutral-purple);
 }
@@ -124,6 +127,9 @@ section.spy_source{
 }
 section.spy_process{
     margin:0rem 6rem;
+}
+section a:link{
+    color: var(--clr-primary);
 }
 section a:visited{
     color: var(--clr-primary);
