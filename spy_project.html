@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPY Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Actor&family=League+Spartan:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+    <section class="spy_problem">
+    <h2>The Problem</h2>
+    <p>The purpose of this project is to research trends on the S&P 500 based on day-to-day statistics.</p>
+    </section>
+    <section class="spy_source">
+        <h2>The Data</h2>
+        <p>I am using the historical SPY dataset from <a href="https://finance.yahoo.com/quote/SPY/history/">Yahoo Finance</a>. This dataset is updated daily, with records all the way back to January 28th, 1993, which was the first trading day for the ETF. </p>
+    </section>
+    <section class="spy_process">
+        <h2>Pre-Processing</h2>
+        <p>There was some very important clarifications I had to make to validate the data I was using. For example, if I wanted to use volume as an indicator, I needed to make sure the dataset accounted for stock splits. Successful stocks and indexes will have stock splits to keep share prices low for retail investors. Surprisingly to me, the SPY ETF has never forgone a stock split. Other things I had to account for were nulls in the dataset. To look for nulls, I iterated through the dataset to find out it is very well cleaned.</p>
+    </section>
+</body>
+</html>
