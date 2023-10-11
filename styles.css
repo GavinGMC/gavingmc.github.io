@@ -174,15 +174,6 @@ article.proj4{
     color: var(--clr-body-dark);
 }
 
-section.spy_problem{
-    margin:0rem 6rem;
-}
-section.spy_source{
-    margin:0rem 6rem;
-}
-section.spy_process{
-    margin:0rem 6rem;
-}
 section a:link{
     color: var(--clr-primary);
 }
@@ -240,7 +231,12 @@ button {
 .hero img{
     width: 100%;
 }
-.spy_modeling img{
+.spy img{
     max-width: 80%;
-    margin-left: 10%;
+}
+.spy{
+    text-align: center;
+}
+.spy{
+    margin:0rem 6rem;
 }
