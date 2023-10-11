@@ -7,25 +7,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Actor&family=League+Spartan:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
+        <div>
+            <img src="images/Gavin.png" class="logo" alt="logo">
+        </div>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><a href="index.html" class="navtext">Home</a></li>
+            <li><a href="projects.html" class="navtext">Projects</a></li>
         </ul>
     </nav>
-    <section class="about">
-        <div class="left">
-            <h1>About Me</h1>
-            <p>Hello! My name is Gavin Ciganek and I am a junior at UNC Charlotte. I have a passion for data science and software development, so I created this website from scratch to display some of the projects I have worked on.</p>
+    <main>
+        <div class="hero">
+            <img src="images/Gavin_Ciganek.png" alt="Hero section">
         </div>
-        <div class = "right">
-            <img src="images/Shatter_Background.png">
-        </div>
-    </section>
-
-
+        <section class="about">
+            <div class="left">
+                <h1>About Me</h1>
+                <p>Hello! My name is Gavin Ciganek and I am a junior at UNC Charlotte. I love playing tennis, basketball, or anything else competitive to get active. I have a passion for data science and software development, so I created this website from scratch to display some of the projects I have worked on.</p>
+            </div>
+            <div class = "right">
+                <img src="images/Shatter_Background.png" alt="cool effect">
+            </div>
+        </section>
+        <section class="contact">
+            <h1>Contact Me</h1>
+            <div class="contact-form">
+                <form>
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <br>
+    <footer>
+        <p>Gavin Ciganek</p>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-linkedin"></a> 
+    </footer>
 </body>
 </html>
