@@ -48,22 +48,37 @@
             <img src="images/linreg_close.png">
         </section>
         <section class="reg-evaluation">
-            
+            <h2>Evaluation</h2>
+            <p>I used an r-squared value to evaluate the usefulness of my model. The r-squared value indicates how much of the price movement can be explained by the model, because the closer the scatter is to the line, the higher the r-squared value. I used this because I wanted to test how successful the model is at predictions.</p>
+            <p>In the stock market, the average investor is going to want a stock on the more predictable side. The r-squared value I got for my model used the "r2_score()" method was 0.747828. R-squared is on a scale from 0-1, so this means that 74.7828% of values were predictable by the model.</p>
         </section>
         <section class="reg-exp2">
-            
+            <h2>Experiment 2</h2>
+            <p>For my second experiment, I decided to change the timeframe to only since 2013 and keep the rest of the model the same. I was interested in two main things; the location of the linear regression line and the difference in r-squared from the first experiment. To do this, I made the date have to be greater than 2013-01-01. Here is the result I got below.</p>
+            <img src="images/linreg_close_since2013.png">
+            <p>This linear regression line is much steeper due to the fast growth of the 2010s and 2021. The all-time model has the end of the linear regression line a decent amount below the current price, while this one since 2013 is right around the price.</p>
+            <p>The r-squared value of this linear regression line is 0.899986. This is significantly higher than the first experiment. That means that the data fits the line better, which can also be seen visually if you compare the two graphs.</p>
         </section>
         <section class="reg-exp3">
-            
+            <h2>Experiment 3</h2>
+            <p>For my third experiment, I decided to change the date to January 1993 to December 2007. Once again, I did not change the rest of the model at all.</p>
+            <img src="images/linreg_close_1993-2007.png">
+            <p>Due to the dot-com bubble, there was a sharp price increase heading into the 2000s. When the dot-com bubble burst, the stock market crashed through 2003. Due to this volatility, the r-squared value is at 0.664329. This is much lower than the other two experiments.</p>
+            <p>It may seem like a weird date range to use, but the reason I chose it was to create a linear regression line before the housing crash in 2008. At the end of 2007, the SPY stock was sitting around $150. In 2009, at the lowest point of the housing crash, the SPY stock dropped to a low of $67.10. Without current events, these drops would not make sense to a viewer. That is why in the present we cannot go strictly off the numbers to predict future results.</p>
         </section>
         <section class="reg-impact">
-            
+            <h2>Impact</h2>
+            <p>These results can have a positive or negative result on someone based on how they are consumed. The main positive result to get out of these experiments is that we cannot predict the short term, but long term there is not many indexes that grow as consistently as the S&P 500. The linear regression model proves it has trended upwards through it's history and pushes through U.S. downturns.</p>
+            <p>A negative impact of my experiments would be if someone believed that these numbers indicated short term growth or decline. I proved this with my third experiment, no matter how consistent the growth looks like, there is always a chance of a large upturn or downturn when you least expect it.</p>
         </section>
         <section class="reg-conclusion">
-            
+            <h2>Conclusion</h2>
+            <p>I learned a lot through these experiments. Trying to predict a value that other people are trying to predict with billions of dollars is never a simple task. Changing the dates to affect the resulting linear regression line was very insightful. While it looks like the data will continue to follow the line, it often will not.</p>
+            <p>Pre-processing this data was tricky at times due to the dates not being able to be strings. I had to improvise and find a solution that would work with sklearn, which overall made me a more knowledgable programmer than before.</p>
         </section>
         <section class="reg-references">
-            
+            <h2>References</h2>
+            <a href="https://finance.yahoo.com/quote/SPY/history/" target="_blank">Yahoo Finance</a>
         </section>
         <section class="reg-code">
             <h2>Code</h2>
