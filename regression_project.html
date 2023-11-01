@@ -21,11 +21,54 @@
         </ul>
     </nav>
 
-    <main>
-        <section class="new_problem">
+    <main class="reg">
+        <section class="reg_problem">
             <h2>The Problem</h2>
-            <p>Currently, I am doing my project based on the S&P 500, but if I can't find strong enough significance, I'll choose a different dataset to get more interesting results.</p>
-            </section>
+            <p>I am doing my project on the historical prices of the S&P 500. Based on the historical data, I am interested to predict future stock prices. The future results are very uncertain, so I want to try to get insight on this by using regression. I am using the SPY historical data from <a href="https://finance.yahoo.com/quote/SPY/history/" target="_blank">Yahoo Finance</a>. This includes variables such as open, close, high, low, and volume. </p>
+        </section>
+        <section class="reg-definition">
+            <h2>What is Regression?</h2>
+            <p>Regression is a method used in data analysis to find a relationship between a dependent and independent variable. Two of the most common regression methods are linear regression and logistic regression. Linear regression is used when the dependent variable is continous, while logistc regression is used when the dependent variable is binary. Both methods are used to predict a future output.</p>
+        </section>
+        <section class="reg-understanding">
+            <h2>Data Understanding</h2>
+            <p>The dataset from Yahoo Finance has the closing price for every day since around the introduction of trading of the "SPY" stock. It follows the S&P 500, which contains a diverse range of most of the largest stocks in the U.S. All of the price variables such as open, close, low, and high are highly correlated with each other on the scale of the entire history of the stock. That means that to create price predictions based on the history, which indicator to use should not change the result too much. I will be using the closing price because that is what is generally used when using the result of a day.</p>
+            <p>Before I get started, there is an existing pattern through history with the SPY stock. It has an upwards trend through it's decades of history, which is why millions of U.S. investors trust it enough to invest large sums of money into it. Below I created a graph using the closing day of every day since its creation.</p>
+            <img src="images/plt_spy_all_time.png">
+        </section>
+        <section class="reg-processing">
+            <h2>Pre-Processing</h2>
+            <p>First, the dataset is located inside of a .csv file, so I read it using pandas into my code. To make sure there are no nulls in the dataset, I used the function "isnull().values.any()" which checks an entire dataframe for nulls, and either returns true our false. It returned true, so I was good to go. For my first experiment, I want to use the closing price as my dependent variable. When I visualized the SPY historical prices above, I checked for outliers that clearly weren't part of the SPY history. Fortunately, it was clear of those as well.</p>
+            <p>I won't need to change any of these features, because I'll have a categorical variable and a dependent variable for each experiment. This is the necessities for a linear regression model, so having these allow me to progress to the next step in the process.</p>
+            <p>When beginning my modeling, I realized that I could not use the date strings that were a part of the .csv file. It was tricky, but I learned you can actually encode the date as an integer. With this new trick, I could move on to modeling.</p>
+        </section>
+        <section class="reg-modeling">
+            <h2>Modeling</h2>
+            <p>Here is my model for linear regression based on the closing price of the SPY stock.</p>
+            <img src="images/linreg_close.png">
+        </section>
+        <section class="reg-evaluation">
+            
+        </section>
+        <section class="reg-exp2">
+            
+        </section>
+        <section class="reg-exp3">
+            
+        </section>
+        <section class="reg-impact">
+            
+        </section>
+        <section class="reg-conclusion">
+            
+        </section>
+        <section class="reg-references">
+            
+        </section>
+        <section class="reg-code">
+            <h2>Code</h2>
+            <p><a href="https://github.com/GavinGMC/spy_linreg">Here is a link to my code</a></p>
+        </section>
     </main>
 </body>
 </html>
