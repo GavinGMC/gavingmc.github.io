@@ -132,6 +132,9 @@ h1.projects{
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
     }
+    .nba img.small{
+        max-width: 40%;
+    }
 }
 @media(max-width: 810px) {
     .right{
@@ -240,12 +243,12 @@ button {
 .spy{
     margin:0rem 6rem;
 }
-.reg img{
+.reg img, .nba img{
     max-width: 80%;
 }
-.reg{
+.reg, .nba{
     text-align: center;
 }
-.reg{
+.reg, .nba{
     margin:0rem 6rem;
 }

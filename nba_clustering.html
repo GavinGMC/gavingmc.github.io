@@ -42,6 +42,35 @@
         <section class="nba_preprocessing">
             <h1>Pre-Proccessing</h1>
             <p>There were a lot of pre-processing steps I had to follow for this experiment. First, they did not keep track of player minutes before the 1951-1952 season. So every player before that period had null data, which I had to remove. There were nulls in other stats, such as blocks, steals, etc. since more stats were kept track of in the 70s. All of the stats I am using for this project were kept after 1951 though.</p>
+            <p>Also, since I wanted a player's career averages and the dataset provides yearly averages, I had to convert the data myself. I had to find the mean for the stats of a player for each season they played to get their career average. Once I did that, the dataset was ready to go.</p>
+        </section>
+        <section class="nba_modeling">
+            <h1>The Clusters</h1>
+            <p>I chose to use k-means for this project, because I wanted to have full control over the amount of clusters created. I also wanted to have equally sized cluster which k-means can handle well. Another benefit is that it is simple and I've used it before, so it is my personal preference.</p>
+            <img src="cluster_images/small_elbow.png" class="small">
+            <p>By using K-means clustering, I had to decide how many clusters I wanted to create. The method I used to figure this out is the elbow method. The elbow method uses the within-cluster sum of squares value for each k-value to determine the optimal amount of clusters. I created the figure above, but I wasn't satisfied with the created elbow, so I decided to add more k-values because of the large size of the dataset.</p>
+            <img src="cluster_images/big elbow.png" class="small">
+            <p>With this figure above, I was able to get a better idea of how many clusters are optimal. I decided to choose 7 clusters, as k=7 is the closest thing there is on the figure to an elbow. Seven clusters also is enough to have variety in the clusters in the graph.</p>
+            <img src="cluster_images/clusters.png">
+        </section>
+        <section class="nba_analysis">
+            <h1>Model Analysis</h1>
+            <p>I really enjoyed observing the model and hovering over the points of players I know and where they go on the scatter. Each individual cluster tells a story. For example, the lime green cluster includes most of the well known greatest scorers of all time. It includes players such as Michael Jordan, Joel Embiid, Kevin Durant, Bob Petit, and many more.</p>
+            <p>Then there is the cream cluster. The cream cluster doesn't average many points or assists, but they have a role on their team because they are great rebounders. A definitive member of this group is Dennis Rodman, who is arguably one of the best rebounders to ever play the game. He was not out there for his offensive ability, but his rebounding skill kept him on the floor. Other examples in this cluster are Steven Adams, Bismack Biyombo, and Noah Vonleh.</p>
+            <p>The dark green cluster is similar to the cream cluster, but the players in this category average much more points. The players in this category are commonly dominant centers, who average high rebounds, pretty high points, and low assists. Some notable players in this cluster are Dwight Howard, Wilt Chamberlain, Andre Drummond, and Hassan Whiteside.</p>
+            <p>The dark red cluster includes players who have very little assists, a decent amount of points, and a decent amount of rebounds. While looking through the names in this cluster, I noticed most of the players are role playing wings. Role playing wings don't handle the ball too much and often lie more towards the perimeter. Even though they often stay out of the paint, their size can still lead them to get some rebounds. Examples of players in this cluster are Robert Covington, Nicholas Batum, Bruce Brown, and Yuta Watanabe.</p>
+            <p>The peach cluster is mostly players that have a high assist count. They score a little bit and get very little rebounds, but the scoring that they create makes them very valuable to have on the floor. Most of these players are point guards, because assisting is their primary purpose. Examples of players in this cluster are John Stockton, Jason Kidd, Mark Jackson, Rajon Rondo, and Ricky Rubio.</p>
+            <p></p>
+        </section>
+
+        <section class="nba_references">
+            <h1>References</h1>
+            <p><a href="https://www.geeksforgeeks.org/elbow-method-for-optimal-value-of-k-in-kmeans/">Geeksforgeeks: Elbow Method for optimal value of k in KMeans</a></p>
+            <p><a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-stats/data">Kaggle: NBA Stats dataset by Sumitro Datta</a></p>
+        </section>
+        <section class="nba_code">
+            <h1>Code</h1>
+            <p><a href="https://github.com/GavinGMC/nba_clustering">Code/Model</a> </p>
         </section>
     </main>
 </body>
